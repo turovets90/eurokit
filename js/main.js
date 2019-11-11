@@ -7,7 +7,7 @@ $(document).ready(function(){
             $('.main_menu').css({
                 'top':header_height+'px'
             });
-            $('header').next().css({
+            $('.home_categories').css({
                 'margin-top':header_height+'px'
             });
         }
