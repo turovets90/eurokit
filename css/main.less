@@ -1073,6 +1073,9 @@ h1, .h1{
 .btn_custom{
   background: none;
   font-weight: bold;
+  .flex();
+  .ai-center();
+  .j-center();
   font-size: 16px;
   text-transform: uppercase;
   color: @blue;
@@ -1081,6 +1084,13 @@ h1, .h1{
   width: 100%;
   max-width: 335px;
   padding: 10px;
+  &:hover, &:focus{
+    text-decoration: none;
+
+  }
+  @media (max-width:575px){
+    font-size: 14px;
+  }
   &.blue{
     background: @blue;
     color: #fff;
@@ -1388,6 +1398,9 @@ h1, .h1{
     }
   }
 
+
+
+
   .pr_list{
     border-bottom: 1px solid @blue;
     margin-bottom: 30px;
@@ -1395,6 +1408,9 @@ h1, .h1{
       display: none;
       border:0;
       margin-bottom: 0;
+    }
+    &.type_fasad_list{
+        border-bottom: 0;
     }
     .item{
       margin-bottom: 55px;
@@ -1528,23 +1544,39 @@ h1, .h1{
               display: none;
             }
           }
-          .short_desc{
-            font-size: 16px;
-            margin-bottom: 30px;
-            @media (max-width:1024px){
-              font-size: 14px;
-              padding-top: 10px;
-              margin-bottom: 0;
-            }
-            @media (max-width:575px){
-              font-size: 12px;
-            }
-          }
-
 
         }
-
       }
+      .short_desc{
+        font-size: 16px;
+        margin-bottom: 30px;
+        @media (max-width:1024px){
+          font-size: 14px;
+          padding-top: 10px;
+          margin-bottom: 0;
+        }
+        @media (max-width:575px){
+          font-size: 12px;
+        }
+      }
+
+      &.type_fasad{
+          .col_right{
+            padding-top:20px;
+            @media (max-width:575px){
+              padding-top: 0;
+            }
+            .short_desc{
+              @media (max-width:1024px){
+                margin-bottom: 20px;
+              }
+              @media (max-width:575px){
+                margin-bottom: 10px;
+              }
+            }
+          }
+      }
+
     }
 
   }
