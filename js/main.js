@@ -30,6 +30,24 @@ $(document).ready(function(){
 
 
 
+    $('.products_group').each(function(){
+        var p_group_title=$(this).find('.p_group_title');
+        $(p_group_title).click(function(){
+            $(p_group_title).toggleClass('act');
+            $(p_group_title).next().slideToggle();
+        });
+    });
+
+    $('.pr_list .item').each(function(){
+        var item_title_mobile=$(this).find('.item_title_mobile');
+        $(item_title_mobile).click(function(){
+            $(item_title_mobile).toggleClass('act');
+            $(item_title_mobile).next().slideToggle();
+        });
+    });
+
+
+
 /*
     $('.mm_btn').on('click',function () {
         $(this).toggleClass('act');
