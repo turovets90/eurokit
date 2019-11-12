@@ -1581,3 +1581,214 @@ h1, .h1{
 
   }
 }
+
+
+
+
+
+.order_steps{
+  .step_item{
+    .flex();
+    padding-bottom: 130px;
+    position: relative;
+    @media (max-width:1400px){
+      padding-bottom: 90px;
+    }
+    @media (max-width:767px){
+      padding-bottom: 40px;
+    }
+    &:before{
+      .b_a();
+      width: 2px;
+      //height: 100%;
+      border:1px dashed @blue;
+      top: 138px;
+      left: 60px;
+      bottom: 18px;
+      @media (max-width:767px){
+        left: 25px;
+        top: 60px;
+        bottom: 10px;
+      }
+    }
+    &:last-child{
+      &:before{
+        display: none;
+      }
+    }
+    .step{
+      position: relative;
+      width: 120px;
+      min-width: 120px;
+      height: 120px;
+      font-size: 50px;
+      color: @blue;
+      .flex();
+      .ai-center();
+      .j-center();
+      .border-radius(50%);
+      margin-right: 105px;
+
+      @media (max-width:1400px){
+        margin-right: 50px;
+      }
+
+      @media (max-width:767px){
+        font-size: 20px;
+        width: 50px;
+        min-width: 50px;
+        height: 50px;margin-right: 20px;
+      }
+      @media (max-width:575px){
+        margin-right: 10px;
+      }
+
+
+      &:before{
+        .b_a();
+        top: 0;
+        left: 0;
+        width: 120px;
+        height: 120px; .border-radius(50%);
+        .transform(rotate(-45deg));
+        @media (max-width:767px){
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      &.step1{
+        &:before{
+          border-left: 1px solid rgba(200, 232, 251, 0.2);
+          border-right: 2px solid @blue;
+          border-top: 1px solid rgba(200, 232, 251, 0.2);
+          border-bottom: 1px solid rgba(200, 232, 251, 0.2);
+        }
+      }
+
+      &.step2{
+        &:before{
+          border-left: 1px solid rgba(200, 232, 251, 0.2);
+          border-right: 2px solid @blue;
+          border-top: 1px solid rgba(200, 232, 251, 0.2);
+          border-bottom: 2px solid @blue;
+        }
+      }
+
+      &.step3{
+        &:before{
+          border-left: 2px solid @blue;
+          border-right: 2px solid @blue;
+          border-top: 1px solid rgba(200, 232, 251, 0.2);
+          border-bottom: 2px solid @blue;
+        }
+      }
+
+      &.step4{
+        &:before{
+          border-left: 1px solid @blue;
+          border-right: 2px solid @blue;
+          border-top: 1px solid @blue;
+          border-bottom: 1px solid @blue;
+        }
+      }
+
+    }
+
+    .text{
+      width: calc(100% - 225px);
+      @media (max-width:1400px){
+        width: calc(100% - 170px);
+      }
+      @media (max-width:767px){
+        width: calc(100% - 70px);
+      }
+      @media (max-width:575px){
+        width: calc(100% - 60px);
+      }
+
+      .title{
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 31px;
+        margin-bottom: 35px;
+        @media (max-width:1400px){
+          margin-bottom: 25px;
+        }
+        @media (max-width:767px){
+          font-size: 18px;
+          margin-bottom: 0;
+        }
+      }
+      em{
+        font-family: @Georgia-Italic;
+        font-size: 20px;
+        margin-bottom: 35px;
+        display: inline-block;
+        @media (max-width:1400px){
+          margin-bottom: 25px;
+        }
+        @media (max-width:767px){
+          font-size: 14px;margin-bottom: 9px;
+        }
+      }
+      .btn_custom{
+        margin-left: -27px;    margin-top: 18px;
+        @media (max-width:767px){
+          margin-top: 9px;
+        }
+      }
+      ul{
+        li{
+          position: relative;
+          display: inline-block;
+          padding-left: 27px;
+          margin-bottom: 18px;
+          @media (max-width:1400px){
+            margin-bottom: 12px;
+          }
+          @media (max-width:767px){
+            font-size: 12px;
+          }
+          &:before{
+            .b_a();
+            left: 0;
+            top: 8px;
+            width: 0;
+            height: 0;
+            border-left:5px solid @blue;
+            border-top:5px solid transparent;
+            border-bottom:5px solid transparent;
+            @media (max-width:767px){
+              top:5px
+            }
+          }
+        }
+      }
+
+      .h_contacts{    margin-top: 18px;
+        @media (max-width:767px){
+          margin-top: 9px;
+        }
+        ul{
+          li{
+            padding-left: 0;
+            &:before{
+              display: none;
+            }
+          }
+        }
+
+      }
+    }
+
+
+  }
+}
+
+
+.mw_1210{
+  max-width: 1210px;
+  margin: auto;
+}
+
