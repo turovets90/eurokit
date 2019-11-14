@@ -119,6 +119,24 @@ $(document).ready(function(){
     });
 
 
+    $('.portfolio_page_slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        //fade: true,
+        dots: true,
+        variableWidth: true,
+        //centerMode: true,
+        focusOnSelect:true,
+        //asNavFor: '.portfolio_page_slider_nav',
+        dotsClass: 'slider__dots',
+        customPaging: function(slick, index) {
+            var image = $(slick.$slides[index]).find('.slider__img').attr('src');
+            return '<img src="' + image + '" alt="" /> '
+        }
+    });
+
+
 
 /*
     $('.mm_btn').on('click',function () {
