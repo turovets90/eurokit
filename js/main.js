@@ -48,6 +48,53 @@ $(document).ready(function(){
 
 
 
+
+    var productView = localStorage.getItem('productView');
+    if(productView == 'list'){
+        $('.views_block .views_grid').removeClass('act');
+        $('.views_block .views_list').addClass('act');
+        $('.portfolio_list').removeClass('grid_view').addClass('list_view');
+    }else if(productView == 'grid'){
+        $('.views_block .views_list').removeClass('act');
+        $('.views_block .views_grid').addClass('act');
+        $('.portfolio_list').removeClass('list_view').addClass('grid_view');
+    }
+    $('.views_block .views_grid').click(function(){
+        localStorage.removeItem('productView');
+        localStorage.setItem('productView', 'grid');
+        $('.views_block .views_list').removeClass('act');
+        $(this).addClass('act');
+        $('.portfolio_list').removeClass('list_view').addClass('grid_view');
+        return false;
+    });
+    $('.views_block .views_list').click(function(){
+        localStorage.removeItem('productView');
+        localStorage.setItem('productView', 'list');
+        $('.views_block .views_grid').removeClass('act');
+        $(this).addClass('act');
+        $('.portfolio_list').removeClass('grid_view').addClass('list_view');
+        return false;
+    });
+
+    console.log( "productView = " + localStorage.getItem("productView"));
+
+
+    if($(window).innerWidth() < 1024){
+        $('.steps_slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            dots:false,
+            //fade:true,
+            //autoplay: true,
+            //speed: 1000,
+            //autoplaySpeed:9000,
+        });
+
+    }
+
+
+
 /*
     $('.mm_btn').on('click',function () {
         $(this).toggleClass('act');
