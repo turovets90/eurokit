@@ -94,6 +94,31 @@ $(document).ready(function(){
     }
 
 
+    if($(window).innerWidth() > 1024){
+        $('.p_slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: false,
+            dots:false,
+            responsive: [
+                {
+                    breakpoint: 1300,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                }
+            ]
+        });
+    }
+
+    $('.s_custon_prev').click(function(){
+        $('.p_slider').slick('slickPrev');
+    });
+    $('.s_custon_next').click(function(){
+        $('.p_slider').slick('slickNext');
+    });
+
+
 
 /*
     $('.mm_btn').on('click',function () {

@@ -2371,3 +2371,131 @@ h2, .h2{
 
   }
 }
+
+
+
+
+.p_list{
+  .flex();
+  .wrap();
+  margin-bottom: 30px;
+  .p_item{
+    .flex();
+    .j-center();
+    .ai-end();
+    width: 25%;
+    height: 380px;
+    background-size: cover;
+    background-position: center;
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+    @media (max-width:1200px){
+      width: 33.33%;
+    }
+
+    @media (max-width:1024px){
+      width: 100%;
+      height: 200px; .ai-center();
+    }
+    @media (max-width:767px){
+      height: 180px;
+    }
+    @media (max-width:575px){
+      height: 120px;
+
+    }
+    @media (max-width:375px){
+      height: 95px;
+    }
+
+    &:before{
+      .b_a();
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+      .transition(@transition_default);
+      z-index: 1;
+    }
+    &:hover, &:focus{
+      text-decoration: none;
+      .text{
+        color: @blue;
+      }
+      .img{
+        .transform(scale(1.2));
+      }
+      &:before{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+      }
+    }
+    .img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      background-position: center;
+      .transition(.5s linear);
+    }
+    .text{
+      font-weight: 800;
+      font-size: 24px;
+      color: #fff;
+      position: relative;
+      .transition(@transition_default);
+      z-index: 2;
+
+    }
+  }
+}
+
+
+.p_btn_group{
+    .flex();
+  .ai-center();
+  .j-center();
+  @media (max-width:1024px){
+    display: none;
+  }
+  button{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background: #6F6F6E;
+    border:0;
+    margin: 0 3px;
+    &:before{
+      .b_a();
+      .m_a();
+      width: 13px;
+      height: 20px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='20' viewBox='0 0 13 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath opacity='0.8' d='M2 2L10 10L2 18' stroke='white' stroke-width='3'/%3e%3c/svg%3e ");
+    }
+    &.s_custon_prev{
+      &:before{
+        .transform(rotate(180deg));
+      }
+    }
+    &.s_custon_next{
+      &:before{}
+    }
+  }
+}
+
+
+.last_container{
+  padding-bottom: 90px;
+  @media (max-width:1200px){
+    padding-bottom: 60px;
+  }
+  @media (max-width:767px){
+    padding-bottom: 40px;
+  }
+  @media (max-width:575px){
+    padding-bottom: 0;
+  }
+}
