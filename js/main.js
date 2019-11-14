@@ -38,12 +38,9 @@ $(document).ready(function(){
         });
     });
 
-    $('.pr_list .item').each(function(){
-        var item_title_mobile=$(this).find('.item_title_mobile');
-        $(item_title_mobile).click(function(){
-            $(item_title_mobile).toggleClass('act');
-            $(item_title_mobile).next().slideToggle();
-        });
+    $('.item_title_mobile').click(function(){
+        $(this).toggleClass('act');
+        $(this).next().slideToggle();
     });
 
 
@@ -111,10 +108,10 @@ $(document).ready(function(){
         });
     }
 
-    $('.s_custon_prev').click(function(){
+    $('.p_prev').click(function(){
         $('.p_slider').slick('slickPrev');
     });
-    $('.s_custon_next').click(function(){
+    $('.p_next').click(function(){
         $('.p_slider').slick('slickNext');
     });
 
@@ -136,6 +133,12 @@ $(document).ready(function(){
         }
     });
 
+    $('.p_prev1').click(function(){
+        $('.portfolio_page_slider').slick('slickPrev');
+    });
+    $('.p_next1').click(function(){
+        $('.portfolio_page_slider').slick('slickNext');
+    });
 
 
 /*
