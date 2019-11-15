@@ -141,6 +141,27 @@ $(document).ready(function(){
     });
 
 
+
+
+    if($(window).innerWidth() < 575){
+        $('.insta_feed_list').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots:false,
+        });
+    }
+
+    $('.i_prev').click(function(){
+        $('.insta_feed_list').slick('slickPrev');
+    });
+    $('.i_next').click(function(){
+        $('.insta_feed_list').slick('slickNext');
+    });
+
+
+
+
 /*
     $('.mm_btn').on('click',function () {
         $(this).toggleClass('act');
