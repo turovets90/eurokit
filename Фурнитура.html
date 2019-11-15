@@ -96,7 +96,7 @@
             <div class="right_nav">
               <ul>
                 <li><a href="#">Как сделать заказ</a></li>
-                <li><a href="#">форма заказа</a></li>
+                <li><a data-toggle="modal" href="#feedback">форма заказа</a></li>
               </ul>
             </div>
           </div>
@@ -421,10 +421,54 @@
         <p class="copyright">© 2018 TM EuroKit. All Rights Reserved.</p>
       </div>
     </footer>
+    <div class="modal fade" id="feedback" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+      <button class="close" data-dismiss="modal" aria-label="Close"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.33333 1.27157e-06L0 3.33333L11.6667 15L0 26.6667L3.33333 30L15 18.3333L26.6667 30L30 26.6667L18.3333 15L30 3.33333L26.6667 0L15 11.6667L3.33333 1.27157e-06Z" fill="#82D0F5"/>
+</svg>
+      </button>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p class="title h1">Форма заказа</p>
+            <p class="sub_title">Если у вас остались вопросы или вы хотите рассчитать стоимость изготовления мебели на заказ по индивидуальному проекту, заполните форму заказа и мы свяжемся с Вами в ближайшее время</p>
+            <form>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-xl-4">
+                  <div class="field">
+                    <input class="form-control" type="text"/>
+                    <label>Ваше имя</label><small>*</small>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-xl-4">
+                  <div class="field">
+                    <input class="form-control" type="text"/>
+                    <label>Телефон</label><small>*</small>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-xl-4">
+                  <div class="field">
+                    <input class="form-control" type="text"/>
+                    <label>E-mail</label><small>*</small>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="field">
+                    <input class="form-control" type="text"/>
+                    <label>Комментарий к заказу</label>
+                  </div>
+                </div>
+                <div class="col-12 btn_block">
+                  <input class="btn_custom" type="submit" value="Отправить"/>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;amp;apikey=1ccacf8b-596c-44d5-9622-c57eef3e0412"></script>
+    <script src="js/wow.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>

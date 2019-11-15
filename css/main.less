@@ -1,3 +1,4 @@
+@import "animate";
 @import "fancybox";
 @import "slick-less";
 @import "bootstrap";
@@ -218,6 +219,9 @@ img, video{
   max-width: 100%;
 }
 
+picture{
+    position: relative;
+}
 
 body{
   background: #101010;
@@ -238,6 +242,10 @@ header{
   width: 100%;
   z-index: 999;
   .flex();
+  .transition(@transition_default);
+  &.fixed{
+    background: @black;
+  }
   @media (max-width:1024px){
     padding:0 15px;
     background: @black;
@@ -755,6 +763,9 @@ header{
       .img{
         .transform(scale(1.2));
       }
+      .content{
+        .title{
+          color: #fff;}}
     }
 
 
@@ -794,6 +805,7 @@ header{
         color: @blue;
         line-height: 1;
         width: 100%;
+        .transition(@transition_default);
         @media (min-width:1025px){
           min-height: 75px;
           margin-bottom: 25px;
@@ -1558,7 +1570,7 @@ h4, .h4{
           font-weight: 800;
           font-size: 14px;
           position: relative;
-          padding-right: 23px;
+          padding-right: 25px;
           padding-left: 10px;
           margin-bottom: 10px;
           line-height: 1.2;
@@ -3362,5 +3374,174 @@ small{
       }
     }
 
+  }
+}
+
+
+
+.modal-backdrop {
+  display: none!important;
+}
+.modal{
+  background: rgba(16, 16, 16, 0.98);
+  color: #FFFFFF;
+  padding-right: 0 !important;
+
+
+  .close{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    opacity: 1;
+    z-index: 9999;
+    @media (max-width:1200px){
+      top: 30px;
+      right: 30px;
+    }
+    @media (max-width:767px){
+      width: 20px;
+      height: 20px;
+      top: 10px;
+      right: 15px;
+      svg{
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+  }
+
+  .modal-dialog{
+
+    @media (min-width:576px){
+      max-width: 1060px;
+    }
+
+    .modal-content{
+      background: none;
+      border:0;
+      .border-radius(0);
+      .modal-body{
+        text-align: center;
+
+        .h1{
+          margin-top: 8px;
+          margin-bottom: 38px;
+          @media (max-width:767px){
+            font-size: 25px; margin-bottom: 20px;
+          }
+        }
+        .sub_title{
+          font-family: @Georgia-Italic;
+          font-size: 20px;
+          line-height: 27px;
+          margin-bottom: 40px;
+          @media (max-width:1024px){
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+          }
+          @media (max-width:767px){
+            font-size: 15px;
+            line-height: 1.5;
+          }
+        }
+
+
+        form{
+          max-width: 950px;
+          margin: auto;
+
+          .btn_block{
+            .flex();
+            .j-center();
+          }
+          .btn_custom{
+            background: @blue;
+            color: #fff;
+            max-width: 260px;
+            cursor: pointer;
+            @media (max-width:767px){
+              max-width: 100%;
+            }
+          }
+
+          .field{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 30px;
+            &.act_label{
+              label{
+                font-size: 10px;
+                text-transform: initial;
+                .transform(translateY(-23px));
+                z-index: 3;
+                padding: 0 5px;
+                background: rgba(16, 16, 16, 0.98);
+              }
+              .form-control{
+                border: 2px solid rgba(255, 255, 255, 0.2);
+              }
+            }
+            .form-control{
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              height: 55px;
+              .border-radius(0);
+              background: none;
+              font-weight: 500;
+              font-size: 12px;
+              color: #FFFFFF;
+              padding-left: 20px;
+            }
+            label{
+              font-weight: 500;
+              font-size: 12px;
+              text-transform: uppercase;
+              color: rgba(255, 255, 255, 0.5);
+              position: absolute;
+              top: 15px;left: 20px;
+               margin-bottom: 0;
+              padding: 5px;
+              pointer-events: none;
+              .transition(@transition_default);
+            }
+            small{
+              color: rgba(255, 255, 255, 0.5);
+              position: absolute;
+              right: 8px;
+              top: 8px;
+              margin-bottom: 0;
+              font-size: 16px;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+}
+
+
+.modal-open{
+  padding-right: 0 !important;
+}
+
+.portfolio_list.list_view .portfolio_item picture{
+  overflow: hidden;
+}
+
+.ct-catalog-overlay {
+  position: absolute;
+  width: 100%;
+  height:100%;
+  z-index: 5;
+  background: #101010;
+}
+
+.grid_view{
+  .ct-catalog-overlay{
+    display: none !important;
   }
 }
